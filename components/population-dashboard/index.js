@@ -10,11 +10,12 @@ const PopulationDashBoard = ({
   country="this country"
 }) => {
   const [csv, setCSV] = useState();
-
   const [view, setView] = useState(initialView);
   const [data, setData] = useState([]);
+
   const firstValue = data && data[0] ? data[0][1] : null;
   const lastValue = data && data[0] ? data[data.length-1][1] : null;
+  const percentageGrowth = (((lastValue - firstValue)/firstValue)*100).toFixed(2);
 
   useEffect(() => {
     fetch(url)
@@ -70,12 +71,13 @@ const PopulationDashBoard = ({
             />
           </div>
         )}
+
         <div>
             {data[0] && (
                 <>
                 <div>From <b>{data[0][0]}</b> to <b>{data[data.length-1][0]}</b><br/>the population of {country} increased from <b>{data[0][1]}</b> to <b>{data[data.length-1][1]}</b> people.</div>                
                 <div className="mt-5">
-                    A growth of <b>{(((lastValue - firstValue)/firstValue)*100).toFixed(2)}%</b> in <b>{data[data.length-1][0] - data[0][0]} years</b>
+                    A growth of <b>{percentageGrowth}%</b> in <b>{data[data.length-1][0] - data[0][0]} years</b>
                 </div>
                 </>
             )}
