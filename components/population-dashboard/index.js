@@ -2,7 +2,7 @@ import { FlatUiTable, LineChart, Table } from "@portaljs/components";
 import { useEffect, useState } from "react";
 import { csvToArray } from "../../utils";
 
-const Dashboard = ({
+const PopulationDashBoard = ({
   url,
   yAxis = "y",
   xAxis = "x",
@@ -85,4 +85,4 @@ const Dashboard = ({
     </div>
   );
 };
-export default Dashboard;
+export default PopulationDashBoard;

@@ -5,7 +5,7 @@ group : 'demography'
 author: 'worlddata.info'
 ---
 
-<Dashboard 
+<PopulationDashboard 
     initialView="chart"  
     url="./cv.csv" 
     country="Cape Verde"

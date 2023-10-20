@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import { Mermaid } from '@portaljs/core';
 
 import Navigation from './navigation';
-import Dashboard from './dashboard';
+import PopulationDashboard from './population-dashboard';
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
 // to handle import statements. Instead, you must include components in scope
@@ -17,7 +17,7 @@ const components = {
   LineChart: dynamic(() => import('@portaljs/components').then(mod => mod.LineChart)),
   FlatUiTable: dynamic(() => import('@portaljs/components').then(mod => mod.FlatUiTable)),
   Navigation : Navigation,
-  Dashboard : Dashboard
+  PopulationDashboard : PopulationDashboard
   
 } as any;
 

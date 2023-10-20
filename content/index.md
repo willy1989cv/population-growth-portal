@@ -1,4 +1,4 @@
-# World Population Growth data portal!
+# Population Growth data portal!
 
 List of available Countries:
 

@@ -6,7 +6,7 @@ author: '@portaljs example'
 ---
 
 
-<Dashboard 
+<PopulationDashboard 
     initialView="chart"  
     url="./example.csv" 
 />
