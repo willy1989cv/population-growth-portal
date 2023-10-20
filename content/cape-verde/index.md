@@ -8,6 +8,7 @@ author: 'worlddata.info'
 <Dashboard 
     initialView="chart"  
     url="./cv.csv" 
+    country="Cape Verde"
 />
 
 
